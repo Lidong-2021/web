@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wb{
+            width: 590px;
+            margin: 0 auto;
+            border: solid 1px red;
+        }
+        #wb>.cls{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="wb">
+        <div class="top">
+            <img src="img/img1.webp" alt="">
+        </div>
+        <div class="cls">
+            <img id="cls" src="img/cls.png" alt="">
+        </div>
+    </div>
+    <script>
+        // 参数id表明元素的id值
+        function $$(id){
+            // return 语句用于返回指定ID名称的dom对象
+            return document.getElementById(id);
+        }
+        var btnCls=$$('cls');
+        btnCls.onclick=function(){
+            //添加一个询问对话框
+            var yesno=confirm('你真的想要关闭这个横幅吗？')
+            if (yesno){
+                $$('wb').style.display='none';
+            }
+            
+        }
+    </script>
+</body>
+</html>                        

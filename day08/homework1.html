@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabs{
+            width: 416px;
+            height: 218px;
+            border: solid 1px #ccc;
+        }
+        .tabs>.nav{
+            overflow: hidden;
+            
+        }
+        .tabs>.nav>span{
+            float: left;
+            width: 104px;
+            background-color: #c5c5c5;
+            text-align: center;
+            padding: 5px 0;
+        }
+        .hidd{
+            display: none;
+        }
+        .show{
+            display: block;
+        }
+        #tabs>.nav>span:hover{
+            background-color: #0392cc;
+            color: #fff;
+        }
+        #focus{
+            background-color: #0392cc;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="tabs" id='tabs'>
+        <div class="nav">
+            <span id="sp1">热点新闻</span>
+            <span id="sp2">合作播报</span>
+            <span id="sp3">行业资讯</span>
+            <span id="sp4">运营攻略</span>
+        </div>
+        <div class="con">
+            <div id="div1" class="hidd">1111</div>
+            <div id="div2" class="hidd">2222</div>
+            <div id="div3" class="hidd">3333</div>
+            <div id="div4">4444</div>
+        </div>
+    </div>
+    <script>
+        function $$(id){
+            return document.getElementById(id);
+        }
+        var sp1=$$('sp1')
+       sp1.onclick=function(){
+           sp1.style.backgroundColor='#0392cc'
+           sp1.style.color='#ffffff'
+       }
+        
+       
+    </script>
+</body>
+</html>

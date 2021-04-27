@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #aa6525;
+        }
+    </style>
+
+</head>
+<body>
+    <script>
+        function createCode(len){
+            var str='0123456789abcdef'
+            var r='#'
+            
+            for (var i=0;i<len;i++){
+                var index=Math.floor(Math.random()*str.length)
+                r+=str[index]
+            }
+            return r
+        }
+        console.log(createCode(6))
+        //随机设置背景颜色
+        document.body.style.backgroundColor=createCode(6)
+    </script>
+</body>
+</html>

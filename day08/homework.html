@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #msg{
+            width: 500px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">
+        <div>
+            <span>大</span>
+            <span>中</span>
+            <span>小</span>
+        </div>
+        <p>
+            滚动锁定键）计算机键盘上的功能键，
+            按下此键后在Excel等按上、下键滚动时，
+            会锁定光标而滚动页面；如果放开此键，则按上、
+            下键时会滚动光标而锁定页面。
+        </p>
+    </div>
+    <script>
+        var spans=document.getElementsByTagName('span')
+        var p1=document.getElementsByTagName('p')
+        spans[0].onclick=function(){
+            p1[0].style.fontSize='50px'
+        }
+        spans[1].onclick=function(){
+            p1[0].style.fontSize='30px'
+        }
+        spans[2].onclick=function(){
+            p1[0].style.fontSize='10px'
+        }
+    </script>
+</body>
+</html>

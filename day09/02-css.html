@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 编写样式代码 -->
+    <style>
+        #tip{
+            border: solid 1px #ccc;
+            width: 200px;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            /* background-color: blue; */
+            /* color: white; */
+        }
+        .red{
+            background-color: red;
+            color:#fff;
+        }
+    </style>
+    <!-- 导入jq -->
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+    <div id="tip">
+        jQuery 框架是如此强大！
+    </div>
+    <div>a</div>
+    <div id="mid">b</div>
+    <div>c</div>
+    <script>
+        $("#tip").on("click",function(){
+            console.log('ok')
+            $('#tip').toggleClass("red")
+        })
+        //获取上一个兄弟元素
+        console.log($("#mid").prev().text())
+        //获取下一个兄弟元素
+        console.log($("#mid").next().text())
+    </script>
+</body>
+</html>

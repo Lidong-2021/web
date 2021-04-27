@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #search{
+            width: 300px;
+            margin: 0 auto;
+        }
+        p{
+            width: 300px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="search">
+        <input type="text" name="key" id="key">
+        <button id="button">查询</button>
+    </div>
+    <p id="p1">
+        近日，央视联系到特斯拉维权女车主的父亲张先生，
+        他也是2月21日事故发生时驾驶车辆的驾驶员。
+        张先生自称有三十多年 <span style="color: red;"></span>
+    </p>
+    <script>
+        function $$(id){
+            return document.getElementById(id)
+        }
+        var btnSearch=$$('button');
+        var key=$$('key');
+        var p1=$$('p1');
+        btnSearch.onclick=function(){
+            var reg=new RegExp(key.value,'ig')
+            var newStr=p1.innerText.replace(reg,'<span style="color: red;">'+key.value+'</span>')
+            p1.innerHTML=newStr;
+        }
+        
+    </script>
+</body>
+</html>

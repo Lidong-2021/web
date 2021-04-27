@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #pic{
+            width: 590px;
+            margin: 0 auto;
+            /* border: solid 1px red; */
+        }
+        /* pic 后代元素  （空格表示后代 尖括号表示子类）*/
+        #pic>fieldset{
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        #pic input{
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 1写元素
+         2写样式
+         3写逻辑
+         4微调 -->
+    <div id="pic">
+        <div class="img">
+            <img  id="img" src="img/img1.webp" alt="">
+        </div>
+        <fieldset>
+            <legend>选择按钮</legend>
+            <!-- name属性的值相同可以确保单选按钮相互排斥 -->
+            <input type="radio" name="pic" id="pic1" checked>
+            <input type="radio" name="pic" id="pic2">
+            <input type="radio" name="pic" id="pic3">
+            <input type="radio" name="pic" id="pic4">
+        </fieldset>
+    </div>
+    <script>
+        // 获取单选按钮对象、显示图片对象
+        var btnPic1=document.getElementById('pic1')
+        var btnPic2=document.getElementById('pic2')
+        var btnPic3=document.getElementById('pic3')
+        var btnPic4=document.getElementById('pic4')
+        var imgShow=document.getElementById('img')
+        // 绑定元素的单击事件、改变图片显示来源
+        btnPic1.onclick=function(){
+            // 设置或重置指定属性名称的值
+            imgShow.setAttribute('src','img/img1.webp')
+        }
+        btnPic2.onclick=function(){
+            // 设置或重置指定属性名称的值
+            imgShow.setAttribute('src','img/img2.webp')
+        }
+        btnPic3.onclick=function(){
+            // 设置或重置指定属性名称的值
+            imgShow.setAttribute('src','img/img3.jpg')
+        }
+        btnPic4.onclick=function(){
+            // 设置或重置指定属性名称的值
+            imgShow.setAttribute('src','img/img4.jpg')
+        }
+    </script>
+</body>
+</html>

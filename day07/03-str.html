@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tip">
+
+    </div>
+    <input type="text" id="txt">
+    <script>
+         //获取文本内容
+        // var objTip=document.getElementById('tip');
+        // var objTxt=document.getElementById('txt');
+        // //绑定
+        // objTxt.oninput=function(){
+        //     var s = objTxt.value.indexOf('a');
+        //     objTip.innerText=s;
+        // }
+        var str='ie=utf-8&f=3&rsv_bp=1&rsv_idx=1&tn=baidu&wd=%E9%85%B7%E7%8B%97&fenlei=256&rsv_pq=f8e41ebf000e12ca&rsv_t=3d80caXELzU1aWmHwxt5GzC9itUI%2F%2Bbn819BcAfipXxyYqShH1gOdhFRvy4&rqlang=cn&rsv_enter=1&rsv_dl=ts_2&rsv_sug3=4&rsv_sug1=4&rsv_sug7=101&rsv_sug2=1&rsv_btype=i&prefixsug=kug&rsp=2&inputT=3301&rsv_sug4=5022'
+        var array =str.split('&')
+        // console.log(array.toString())
+        for(var i=0;i<array.length;i++){
+            if (array[i].split('=')[0]=='ie'){
+                var s=array[i]
+                console.log(s.split('=')[1])
+                break
+            }
+        }
+    </script>
+</body>
+</html>

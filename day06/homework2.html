@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 13px;
+        }
+        #bg{
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: rgba(0,0,0,0.5);
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+        #box{
+            border-radius: 3px;
+            border: solid 1px #ccc;
+            width: 260px;
+            /* height: 100px; */
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            top:50%;
+            margin-left: -130px;
+            margin-top: -75px;
+            display: none;
+        }
+        #box .title{
+            background-color: #008081;
+            color: white;
+            padding: 10px 20px;
+        }
+        #box .con{
+            background-color: #fff;
+            border: solid 0px red;
+            overflow: hidden;
+        }
+        #box .con .img{
+            margin: 10px 10px 0px 10px;
+            float: left;
+        }
+        #box .con .rright{
+            float: left;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        #box .con .rright .btn{
+            text-align: center;
+        }
+        #box .con .rright .btn>button{
+            background-color: #008081;
+            width: 62px;
+            border: none;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <button id="btnShow">弹出</button>
+    <div id="bg"> </div>
+    <div id="box">
+        <div class="title">
+            提示
+        </div>
+        <div class="con">
+            <div class="img">
+                <img src="img/gth.jpeg" alt="" width="80px">
+            </div>
+            <div class="rright">
+                <p>你真的要删除这条记录吗？</p>
+                <div class="btn">
+                    <button id="btn">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btnShow=document.getElementById("btnShow");
+        var divBg=document.getElementById('bg');
+        var divBox=document.getElementById('box');
+        var divBtn=document.getElementById('btn');
+        btnShow.onclick=function(){
+            divBg.style.display='block';
+            divBox.style.display='block';
+        }
+        divBtn.onclick=function(){
+            divBg.style.display='none';
+            divBox.style.display='none';
+        }
+    </script>
+</body>
+</html>

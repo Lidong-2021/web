@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div>abc</div>
+    <div>def</div>
+    <div>ggg</div>
+    <script>
+        //each 使用 选择器.each（function(index,element){}
+        // 遍历选择器获取到的列表集合然后得到每一个元素对象（原生）加前面加$表示jq对象
+        $('div').each(function(index,elem){
+            console.log(index)
+            console.log($(elem))
+            console.log($(elem).text())
+        })
+    </script>
+</body>
+</html>

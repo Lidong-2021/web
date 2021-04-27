@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #result,#re2{
+            width: 100px;
+            margin: 0 auto;
+            background-color: darkcyan;
+            border: solid 1px #ccc;
+            font-size: 30px;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+        0000
+    </div>
+    <div id="re2">
+
+    </div>
+
+    <script>
+        var a;
+        var re=0;
+        for(a=1;a<=100;a++){
+            re+=a
+            document.getElementById('result').innerText=re
+        }
+        re=0;
+        a=2;
+        while (a<=100){
+            re+=a
+            a+=2
+        }
+        document.getElementById('re2').innerText=re
+
+    </script>
+</body>
+</html>

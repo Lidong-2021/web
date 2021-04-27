@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tip{
+            width: 300px;
+            height: 40px;
+            background-color: darkcyan;
+            /* 改变鼠标形态 */
+            cursor: pointer ;
+        }
+    </style>
+</head>
+<body>
+    <div id="tip" onclick="bb()">
+        程序员的法则
+    </div>
+    <div id="nr">
+        <p>就是天天写代码</p>
+        <p>就是天天写代码</p>
+        <p>就是天天写代码</p>
+        <p>就是天天写代码</p>
+        <p>就是天天写代码</p>
+        
+    </div>
+    <script>
+        function bb(){
+            var a =document.getElementById('tip');
+            var b =document.getElementById('nr');
+            if (b.style.display==''){b.style.display='none'}else{b.style.display=''}
+        }
+    </script>
+</body>
+</html>
