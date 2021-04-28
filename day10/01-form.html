@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #tip{
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- action 属性表示提交到服务器端路径 -->
+    <!-- 表单验证事件不在提交按钮上，数据由表单提交，按钮是为表单服务的所以验证事件在表单上 -->
+    <!-- 在submit事件中，如果返回值为FALSE 不能提交 返回TRUE 则可以提交 -->
+    <form action=""
+          onsubmit="return sub();">
+        <!-- name 是用于获取数据的名称 -->
+        <!-- id 用于js、css中定位这个元素 -->
+        <input type="text" name="aa" id="aa">
+        <input type="submit" value="提交">
+        <div id="tip">
+            <!-- 添加1个信息提示元素 -->
+            内容不能为空
+        </div>
+    </form>
+    <script>
+        // 编写提交事件的函数 返回真假
+        // 获取到文本框元素对象
+        var aa=document.getElementById('aa');
+        var tip=document.getElementById('tip')
+        function sub(){
+            
+            if(aa.value==""){
+                tip.style.display='block';
+                aa.focus();
+                return false;
+            }
+        return true;
+        }
+
+    </script>
+</body>
+</html>
